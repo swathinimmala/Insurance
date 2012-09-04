@@ -1,0 +1,16 @@
+<%#= link_to_function "test js", '$(this).html("js works")' %>
+<%= form_for @user do |user| %>
+  <p>
+    <%= user.label :name %><br />
+    <%= user.text_field :name, :id => "name" %>
+  </p>
+  <p>
+    <%= user.label :age %><br />
+    <%= user.text_field :age, :id => "age" %>
+  </p>
+     <%= user.fields_for :policy_holders do |ph|%>
+     <%= ph.label :policy %>
+     <%= ph.text_field :policy_id %>
+     <% end %>
+  <p><%= user.submit "Register", :id => "register" %></p>
+<% end %>

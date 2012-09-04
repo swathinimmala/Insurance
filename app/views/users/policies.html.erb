@@ -1,0 +1,7 @@
+<%= form_for @policy_holder do |ph| %>
+  <% ph.label :user %> </br>
+  <% ph.text_field :user %> </br>
+  <% ph.label :policy %> </br>
+  <% ph.text_field :policy %>  </br>
+  <% ph.submit "take this policy" %>
+<% end %>
